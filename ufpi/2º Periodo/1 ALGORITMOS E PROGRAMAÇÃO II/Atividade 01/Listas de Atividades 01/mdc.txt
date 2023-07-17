@@ -1,0 +1,3 @@
+﻿Com o algoritmo de Euclides, o numero de repetições do mdc de 31733 e 513623 é equivalente a 14.
+Ja com o algoritmo trivial, seu numero de repetições é igual 42. 
+Podemos observar que o algoritmo de Euclides é bastante eficiente em economizar em numero de repetições.
