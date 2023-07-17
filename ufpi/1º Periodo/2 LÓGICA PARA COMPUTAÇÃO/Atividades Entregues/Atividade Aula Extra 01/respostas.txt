@@ -1,0 +1,65 @@
+ Questão 01: 
+
+Diga se as seguintes afirmações são verdadeiras ou falsas e justifique sua resposta. 
+1. Verdadeiro.
+
+2. Verdadeiro.
+
+3. Verdadeiro.
+
+4. Falso, os valor semântico so vai ser T quando ambas os lados forem T.
+
+5. Falso, quando o valor semântico da esquerda é diferente do valor semântico da direita é F.
+----------------------------------------------------------------------------------------------------
+Questão 02:
+
+Sejam I uma interpretação e a fórmula H = (P e ~Q) implica (Q ou ~P)
+
+1. Se I[H] = T, o que se pode concluir a respeito de I[P] e I[Q]? Não se pode concluir,pois como se trata
+de uma implicação,devemos ter pelo menos a informação do antecessor.
+
+2. Se I[H] = T e I[P] = T, o que se pode concluir a respeito de I[Q]? Não podemos concluir nada da sua
+interpretação pois ainda falta informação.
+
+3. se I[Q] = T, podemos concluir que I[H] = T.
+
+4. Se I[H] = T e I[P] = F, não podemos concluir nada a respeito da I[Q].
+--------------------------------------------------------------------------------------------------------
+Questão 03:
+
+Sejam I uma interpretação e a fórmula H = (P ->(Q v ~P)).
+
+a. Se I[H] = T,não se pode concluir nada.
+
+b. Se I[H] = T e I[P] = T, podemos concluir que I[Q] = T,pois precisa dessa interpretação para manter a
+semantica na estrutura.
+
+c. Se I[Q] = T, não podemos concluir nada a respeito de I[H] , pois precisamos de alguma informação a mais
+porque ele se trata se um antecessor.
+
+d. Se I[H] = T e I[P] = F, não podemos concluir nada de I[Q].
+
+e. Se I[Q] = F e I[P] = T, podemos concluir que I[H] = F.
+--------------------------------------------------------------------------------------------------------
+Questão 04:
+I[P -> Q] = T
+
+1. F F V
+2. F V V
+3. V V V
+
+a. 
+1. Se I[P] = T e I[Q] = T, então I[(P ∧ Q)→ (Q → P)] = V
+2. Se I[P] = F e I[Q] = V, então I[(P ∧ Q)→ (Q → P)] = V
+3. Se I[P] = F e I[Q] = F, então I[(P ∧ Q)→ (Q → P)] = V
+
+b.
+1. Se I[P] = T e I[Q] = T, então I[(P ↔ ¬Q)→ (¬P ∨ Q)] = V
+2. Se I[P] = T e I[Q] = F, então I[(P ↔ ¬Q)→ (¬P ∨ Q)] = F
+3. Se I[P] = F e I[Q] = F, então I[(P ↔ ¬Q)→ (¬P ∨ Q)] = V
+
+c.
+1. Se I[P] = T e I[Q] = T, então I[(Q → P) ↔ (¬P → Q)] = V
+2. Se I[P] = T e I[Q] = F, então I[(Q → P) ↔ (¬P → Q)] = V
+3. Se I[P] = F e I[Q] = F, então I[(Q → P) ↔ (¬P → Q)] = F
+

@@ -1,0 +1,139 @@
+1. (∀x)((∀y)¬p(g( f (x, y), b), c) ∧ (∃z)q(a, f (b, g(x,z))))
+
+comprimento: 7
+
+sub-fórmulas: 7
+(∀x)((∀y)¬p(g( f (x, y), b), c) ∧ (∃z)q(a, f (b, g(x,z))))
+(∀y)¬p(g( f (x, y), b), c) ∧ (∃z)q(a, f (b, g(x,z))
+(∀y)¬p(g( f (x, y), b), c)
+¬p(g( f (x, y), b), c)
+p(g( f (x, y), b), c)
+(∃z)q(a, f (b, g(x,z)))
+q(a, f (b, g(x,z)))
+
+variáveis livres: 0
+
+variáveis ligada: 3{x;y;z}
+x em (∀x)((∀y)¬p(g( f (x, y), b), c) ∧ (∃z)q(a, f (b, g(x,z))))
+y em (∀y)¬p(g( f (x, y), b), c)
+z em (∃z)q(a, f (b, g(x,z)))
+
+símbolos livres: 7
+p;q;g;f;a;b;c
+
+escopo:
+∀x: ((∀y)¬p(g( f (x, y), b), c) ∧ (∃z)q(a, f (b, g(x,z))))
+∀y: ¬p(g( f (x, y), b), c)
+∃z: q(a, f (b, g(x,z)))
+
+=============================================================
+
+2. (∀z)(¬(r(z, a) ∨ r(b,z))) ∨ ¬((∃x)p(x,z) ∧ (∃y)q(x, y))
+
+comprimento: 12
+
+sub-fórmulas: 12
+(∀z)(¬(r(z, a) ∨ r(b,z))) ∨ ¬((∃x)p(x,z) ∧ (∃y)q(x, y))
+(∀z)(¬(r(z, a) ∨ r(b,z)))
+(¬(r(z, a) ∨ r(b,z)))
+¬(r(z, a)
+r(z, a)
+r(b,z)
+¬((∃x)p(x,z) ∧ (∃y)q(x, y))
+(∃x)p(x,z) ∧ (∃y)q(x, y)
+(∃x)p(x,z)
+p(x,z)
+(∃y)q(x, y)
+q(x, y)
+
+variáveis livres: 2
+z em (∃x)p(x,z)
+x em (∃y)q(x, y)
+
+variáveis ligada: 3
+z em (∀z)(¬(r(z, a) ∨ r(b,z)))
+x em (∃x)p(x,z)
+y em (∃y)q(x, y)
+
+símbolos livres: 7
+r; p; q; a; b; z; x;
+
+escopo:
+∀z: (¬(r(z, a) ∨ r(b,z)))
+∃x: p(x,z)
+∃y: q(x, y)
+
+==================================================
+
+3. ¬q(z) ∧ p( f (y,z), c) ∨ ¬r( f (x, a), b)
+
+comprimento: 7
+
+sub-fórmulas: 
+¬q(z) ∧ p( f (y,z), c) ∨ ¬r( f (x, a), b)
+¬r(f(x, a), b)
+r(f(x, a), b)
+p(f(y,z), c)
+¬q(z)
+q(z)
+
+variáveis livres: 3
+x; y; z;
+
+variáveis ligada: 0
+
+símbolos livres: 9
+q; p; r; f; a; b; x; y; z;
+
+4. ((∃y)p(y,z) ∨ (∀x)r(x,z)) → q(f(x,z),y)
+
+comprimento: 7
+
+sub-fórmulas: 7
+((∃y)p(y,z) ∨ (∀x)r(x,z)) → q(f(x,z),y)
+((∃y)p(y,z) ∨ (∀x)r(x,z))
+(∀x)r(x,z)
+r(x,z)
+(∃y)p(y,z)
+p(y,z)
+q(f(x,z),y)
+
+variáveis livres: 2
+z em (∃y)p(y,z) e (∀x)r(x,z)
+y em q(f(x,z),y)
+
+variáveis ligada: 2
+y em (∃y)p(y,z)
+x em (∀x)r(x,z)
+
+símbolos livres: 6
+p; r; q; f; z; y;
+
+escopo:
+Não há quantificadores.
+
+===========================================
+
+5. (∀x)((∃y)p(f(x, y),b) → q(x,f(x,a),b))
+
+comprimento: 5
+
+sub-fórmulas: 5
+(∀x)((∃y)p(f(x, y),b) → q(x,f(x,a),b))
+(∃y)p(f(x, y),b) → q(x,f(x,a),b)
+(∃y)p(f(x, y),b)
+p(f(x, y),b)
+q(x,f(x,a),b)
+
+variáveis livres: 0
+
+variáveis ligada: 2
+x em (∀x)((∃y)p(f(x, y),b) → q(x,f(x,a),b))
+y em (∃y)p(f(x, y),b)
+
+símbolos livres: 5
+p; q; f; a; b;
+
+escopo:
+∀x: ((∃y)p(f(x, y),b) → q(x,f(x,a),b))
+∃y: p(f(x, y),b)

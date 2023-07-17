@@ -1,0 +1,111 @@
+1º)
+a) 
+H1 = (∃x)(p(x) ∧ ¬r(a)) ∧ ((∀y)p(y) → (∃x)(q(x) ∨ r(x)))
+
+H11 = (∃x)(p(x) ∧ ¬r(a))
+I[H11] = (∃x)(p(x) ∧ ¬r(10))
+I[H11] = (∃x)(p(24) ∧ ¬r(10))
+I[H11] = T.
+
+H12 = ((∀y)p(y) → (∃x)(q(x) ∨ r(x)))
+H121 = (∀y)p(y)
+I[p] = F
+I[H121] = F
+Como I[H121] = F, pela regra do → I[H12] = T.
+
+Como I[H11] = T e I[H12] = T, então I[H1] = T.
+
+
+b)
+H2 = ¬(∃z)(p(z) → (∀x)(q(z) ∧ r(x))) ∧ ((∀y)p(y) → (∃x)r(x))
+
+H21 = ¬(∃z)(p(z) → (∀x)(q(z) ∧ r(x)))
+H211 = p(z)
+I[H211] = (22)
+I[H211] = T
+
+H212 = (∀x)(q(z) ∧ r(x))
+I[r] = F
+I[H212] = F
+
+Pela regra do ¬, I[H21] = T.
+
+H22 = ((∀y)p(y) → (∃x)r(x))
+H221 = (∀y)p(y)
+I[H221] = F
+
+I[H22] = T.
+
+Como I[H21] = T e I[H22] = T, então I[H2] = T.
+
+
+c) 
+H3 = ¬(∀z)(p(z) ∨ q(z)) → ((∃x)(q(z) ∧ r(x)) ∨ ((∀y)p(y) → (∃x)r(x)))
+
+H31 = ((∃x)(q(z) ∧ r(x)) ∨ ((∀y)p(y) → (∃x)r(x)))
+H311 = ((∀y)p(y) → (∃x)r(x)))
+(∃x)r(x)
+I[r] = T
+Como I[r] = T, então I[H311] = T pela regra do →.
+Como I[H311] = T, então pela regra do ∨ I[H31] = T.
+
+Portanto,como I[H31] = T, então I[H3] = T pela regra do →.
+
+d)
+H4 = (∃x)(p(x) ∨ ¬r(a)) ∧ ((∀y)p(y) → (∃x)(q(b) ∨ r(x)))
+
+H41 = (∃x)(p(x) ∨ ¬r(a))
+H411 = p(x)
+I[H411] = T
+Como I[H411] = T, pela regra do ∨ , I[H41] = T.
+
+H42 = ((∀y)p(y) → (∃x)(q(b) ∨ r(x)))
+H421 = (∀y)p(y)
+I[H421] = F
+Como I[H421] = F, pela regra do → , I[H42] = T.
+
+Como I[H41] = T e I[H42] = T, então I[H4] = T.
+
+2º)
+a)
+H1 = (∃x)¬(p(x, y) ∧ r(y)) ∧ ((∀x)p(x, a) ∨ (∃y)(r(y) → r(b)))
+
+H11 = (∃x)¬(p(x, y) ∧ r(y))
+I[p] = (x, y) => (x * 2, 32) => T
+I[r] = T
+Pela regra do ¬ I[H11] = F.
+
+Como I[H11] = F, então I[H1] = F.
+
+b)
+H2 = ((∀x)p(x, a) ∨ (∃x)r(x)) ∧ (∀x)((p(x, b) ∨ r(x)) → q(x) ∨ r(y))
+
+H21 = ((∀x)p(x, a) ∨ (∃x)r(x))
+H211 = (∃x)r(x)
+I[r] = T
+I[H211] = T
+Como I[H211] = T, pela regra do ∨ I[H21] = T.
+
+H22 = (∀x)((p(x, b) ∨ r(x)) → q(x) ∨ r(y))
+H221 = r(y)
+I[r] = (30) => I[r] = T
+I[H221] = T.
+
+Como I[H21] = T e I[H221] = T, então I[H2] = T.
+
+c)
+H3 = ((∃x)p(x, a) ∧ (∃x)¬r(x)) ∧ ((∀x)(p(x, b) ∨ r(x)) → (¬(∃x)q(x) ∨ r(y)))
+
+H31 = (∃x)¬r(x)
+I[H31] = (∃x)¬r(2 * 2)
+I[H31] = F
+
+Como I[H31] = F, então pela regra do ∧ I[H3] = F.
+
+
+
+
+
+
+
+

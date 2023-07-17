@@ -1,0 +1,112 @@
+1)
+a. H1 = P ¬ (Q ^ R) não é uma fórmula,pois o símbolo "¬"
+não pode conectar fórmulas mas apenas acompanhar o símbolo
+proposicional.
+
+b. H2 = ¬ Q → ¬ (P v ¬ Q) é uma fórmula.
+
+c. H3 = ¬ ¬ (^P v ¬ (R ^ ¬ P)) não é uma fórmula,pois o conectivo proposicional "^" não esta satisfazendo a regra pois
+necessecita de mais um símbolo proposicional para acompanha-lo.
+
+d. H4 = (R ^ ¬ ¬ (Q → P)) ↔︎ ¬ ((P v ¬ R) → (R → ¬ Q)) é uma fórmula.
+
+e. H5 = ¬ ((Q ^ R v ¬ P) ↔︎ (PQ ^ ¬ (R v Q))) não é uma fórmula porque nela apresenta dois símbolos proposicionais emparelhados
+sem a presença de um conectivo "PQ".
+
+2)
+a. G1 = ( ¬ Q → R) ↔︎ (¬ (¬ P)) ==   (¬ Q → R) ↔︎ ¬¬ P , todos parenteses retirados da formula "(¬ (¬ P))" porque as negações continuam implicando em "P".
+
+b. G2 = ¬((Q ^ R v (¬ P)) ↔︎ (P → (Q ^ ¬ (R v Q)))) ==  ¬(Q ^ R v ¬ P) ↔︎ P → (Q ^ ¬(R v Q))), os parenteses externos da formula "¬((Q ^ R v (¬ P))" foram retirados
+porque não muda a precedencia da estrutura,assim como também a formula "(P → (Q ^ ¬ (R v Q))))" foram elimados os externos.
+
+c. G3 = (R ^ ¬ ¬ (Q → P)) ↔︎ ¬ ((P v ¬ R) → (R → ¬ Q)) == R ^ ¬ ¬ (Q → P) ↔︎ ¬(P v ¬ R → (R → ¬ Q)) , os parenteses da formula "(R ^ ¬ ¬ (Q → P))" foram elminados
+porque tratam-se de serem parenteses externos,não mudam a ordem e os parenteses retirados da formula "¬ ((P v ¬ R) → (R → ¬ Q))" porque manteve a ordem de precedencia
+dos conectivos.
+
+d. G4 = ¬ (P) v ((Q ^ P) v ¬ R) == ¬ P v (Q ^ P v ¬ R) , os parenteses da formula "¬ (P)" foram tirados pois a negação continua implicando em P e também foram retirados
+da formula "((Q ^ P) v ¬ R)" porque o pareteses não faz mudança na ordem da leitura de precedencia.
+
+e. G5 = (¬ (Q ^ ¬ P) v S) → (P ↔︎ (¬ Q ^ (R v S))) == ¬ (Q ^ ¬ P v S) → (P ↔︎ (¬ Q ^ R v S)) , a formula "(¬ (Q ^ ¬ P) v S)" teve os parenteres retirados pois a propria
+negação tem maior precedencia,não mudando o resultado da formula e a formula "(P ↔︎ (¬ Q ^ (R v S)))" foram tirados porque sem eles a ordem de precedencia continua
+a mesma.
+
+3
+a. E1 = (R ^ ¬ ¬ (Q → P)) ↔︎ ¬((P v ¬ R) → (R → ¬ Q))
+comp[E1]= 18
+subfórmulas: 
+R	  
+(P v ¬ R)	
+(P v ¬ R) → (R → ¬ Q)
+Q
+(R → ¬ Q)  
+¬((P v ¬ R) → (R → ¬ Q))
+P
+(Q → P)
+(R ^ ¬ ¬ (Q → P)
+¬ Q
+¬ (Q → P)
+E1
+¬ R  
+¬ ¬ (Q → P)  
+
+b. E2 = ¬ (P ↔︎ ¬R) v ((Q ^ P) v ¬ R)
+comp[E2] = 12
+subfórmulas:
+E2
+P	
+R
+Q
+¬R
+(Q ^ P)	
+(P ↔︎ ¬R)
+¬ (P ↔︎ ¬R)
+(Q ^ P) v ¬ R
+
+c. E3 = (¬ (Q ^ ¬ P) v S) → (P ↔︎ (¬ Q ^ (R v S)))
+comp[E3] = 16
+subfórmulas:
+E3
+S
+R
+R v S
+Q
+¬ Q
+¬ Q ^ (R v S)
+P
+P ↔︎ (¬ Q ^ (R v S))
+¬ P 
+Q ^ ¬ P
+¬ (Q ^ ¬ P)
+¬ (Q ^ ¬ P) v S
+
+d. E4 = ¬ ((Q ^ R v (¬ P)) ↔︎ (P → (Q ^ ¬ (R v Q))))
+comp[E4]= 16
+subfótmulas:
+E4
+Q
+R
+R v Q
+¬ (R v Q)
+Q ^ ¬ (R v Q)
+P
+P → (Q ^ ¬ (R v Q))
+¬ P
+Q ^ R
+Q ^ R v (¬ P)
+¬ ((Q ^ R v (¬ P))
+R v (¬ P)
+
+e.  E5 = (Q → ¬ R) ↔︎ (¬ (¬ P ^ (S v R)))
+comp[E5]= 12
+subfórmulas:
+E5
+Q
+R
+P
+S
+S v R
+¬ P
+¬ P ^ (S v R))
+¬ (¬ P ^ (S v R))
+¬ R
+Q → ¬ R

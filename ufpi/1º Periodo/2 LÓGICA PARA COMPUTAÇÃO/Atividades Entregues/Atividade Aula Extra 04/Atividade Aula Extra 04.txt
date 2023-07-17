@@ -1,0 +1,69 @@
+Seja I uma interpretação sobre os números naturais ℕ
+I[a] = 1
+I[x] = 1
+I[p] = <
+I[f] = f1
+f1(d) = d + 1
+I[q(x)] = T se é par
+o valor de I[y] é desconhecido.
+
+Seja J uma interpretação sobre os números inteiros Z
+J[a] = 0
+J[x] = -1
+J[y] = 0
+J[p] = <
+J[f] = f1
+f1(d) = d + 1
+
+Determine, quando for possível, as interpretações das fórmulas a seguir conforme I e J.
+
+a) p(x,a) => I[p] = (1,1) = F
+   p(x,a) => J[p] = (-1,0) = T
+
+b) H1 = p(x, a) ∧ p(x, f (x)) 
+   p(x, a) => I[p] = (1,1) = F.
+   I[H1] = F.
+
+   p(x, a) => J[p](-1,0) => T
+   p(x, f (x) => J[p] = (-1,2) => T
+   J[H1] = T.
+   
+   
+c) H2 = (∃y)p(y, x)
+   I[p] = (∃y)(y, 1) => T.
+   J[p] = (∃y)(y, -1) => T.
+
+d) H3 = (∀y)(p(y, a) ∨ p( f (y), y))
+   p(y, a) => I[p] = (y, 1) => F.
+   p(f(y), y) => I[p] = (y + 1, y) => F.
+   I[H3] = F.
+
+   p(y, a) => J[p] = (y, 0) => F.
+   p(f(y), y) => I[p] = (y + 1, y) => F.
+   J[H3] = F.   
+
+e) H4 = (∀x)(∃y)p(x, y)
+   p(x, y) => I[p] = F.
+   I[H4] = F.
+   
+   p(x, y) => J[p] = F.
+   J[H4] = F.
+
+f) H5 = (∃y)(∀x)p(x, y)
+   p(x, y) => I[p] = F.
+   I[H5] = F.
+
+   p(x, y) => I[p] = F
+   J[H5] = F
+
+g) H6 = (∀x)(∃x)q(x)
+   I[H6] = T
+   interpretação J não é possivel, pois não há interpretação q.
+
+
+h) H7 = (∃x)(∀x)q(x)
+   I[H7] = F
+   interpretação J não é possivel, pois não há interpretação q.
+
+
+

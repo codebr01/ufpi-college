@@ -1,0 +1,25 @@
+1º 
+a.
+ P ^ Q -> R
+
+b.
+ ~P -> ~R
+
+c.
+ (~P v R) -> P v R
+
+d.
+ (P -> Q) ^ Q -> R
+
+2º
+a. SATISFATIVEL
+
+b. TAUTOLOGIA
+
+c. SATISFATIVEL
+
+d. TAUTOLOGIA
+
+e. SATISFATIVEL
+
+f. SATISFATIVEL

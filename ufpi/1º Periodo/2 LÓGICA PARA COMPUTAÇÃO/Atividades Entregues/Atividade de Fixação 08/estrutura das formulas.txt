@@ -1,0 +1,71 @@
+H1 = (∃x)(p(x) ∧ ¬r(a)) ∧ ((∀y)p(y) → (∃x)(q(x) ∨ r(x)))
+
+Comprimento(13)-
+
+Sub-formulas(13)-
+(∃x)(p(x) ∧ ¬r(a)) ∧ ((∀y)p(y) → (∃x)(q(x) ∨ r(x)))
+(∃x)(p(x) ∧ ¬r(a))
+(p(x) ∧ ¬r(a))
+p(x)
+¬r(a)
+r(a)
+((∀y)p(y) → (∃x)(q(x) ∨ r(x)))
+(∀y)p(y)
+p(y)
+(∃x)(q(x) ∨ r(x))
+(q(x) ∨ r(x))
+q(x)
+r(x)
+
+Escopo-
+∃x: (p(x) ∧ ¬r(a))
+∀y: p(y)
+∃x: (q(x) ∨ r(x))
+
+Variaveis ligadas(3)-
+x em (∃x)(p(x) ∧ ¬r(a))
+y em (∀y)p(y)
+x em (∃x)(q(x) ∨ r(x))
+
+Variaveis livres(0)-
+Não há variaveis livres
+
+Simbolos livres(4)-
+p, r, q, a;
+
+H2 = ¬(∃z)(p(z) → (∀x)(q(z) ∧ r(x))) ∧ ((∀y)p(y) → (∃x)r(x))
+
+Comprimento(14)-
+
+Sub-formulas(14)-
+¬(∃z)(p(z) → (∀x)(q(z) ∧ r(x))) ∧ ((∀y)p(y) → (∃x)r(x))
+¬(∃z)(p(z) → (∀x)(q(z) ∧ r(x)))
+(∃z)(p(z) → (∀x)(q(z) ∧ r(x)))
+(p(z) → (∀x)(q(z) ∧ r(x)))
+p(z)
+(∀x)(q(z) ∧ r(x))
+(q(z) ∧ r(x))
+q(z)
+r(x)
+((∀y)p(y) → (∃x)r(x))
+(∀y)p(y)
+p(y)
+(∃x)r(x)
+r(x)
+
+Variaveis ligadas(3)-
+z em ¬(∃z)(p(z) → (∀x)(q(z) ∧ r(x)))
+x em (∀x)(q(z) ∧ r(x)) e (∃x)r(x)
+y em (∀y)p(y)
+
+Variaveis livres(0)-
+Não há variaveis livres.
+
+Simbolos livres(3)-
+p, q, r;
+
+Escopo-
+∃z: (p(z) → (∀x)(q(z) ∧ r(x))
+∀x: (q(z) ∧ r(x))
+∀y: p(y)
+∃x: r(x)

@@ -1,0 +1,149 @@
+Questão 02: Seja as expressões da lógica de predicados a seguir, diga qual é o comprimento, quantas são as 
+variáveis ligadas e quantos são os símbolos livres. Além disso, descreva as subfórmulas, termos: (4,0 pontos)
+
+a) 
+H3 = (∀x)(p(x, y) ∧ r(y)) → (∃z)(p(y, f (x,z)) ∨ q(a, b, g(x, y,z)))
+
+comprimento: (9) variáveis ligadas: (2) símbolos livres: (9)
+
+subfórmulas(9):
+H3
+(∀x)(p(x, y) ∧ r(y))
+(p(x, y) ∧ r(y))
+p(x, y)
+r(y)
+(∃z)(p(y, f (x,z)) ∨ q(a, b, g(x, y,z)))
+p(y, f (x,z)) ∨ q(a, b, g(x, y,z))
+p(y, f (x,z))
+q(a, b, g(x, y,z))
+
+termos(7):
+x, y, f, z, a, b, g;
+
+b)
+H4 = ((∀y)r(y, f (a, y)) ∨ (∃y)q(a,y)) → (q(x,f(y,a)) ∧ ((∃x)r(a, f (x,y))))
+
+comprimento: (10) variáveis ligadas: (2) símbolos livres: (6)
+
+subfórmulas(10):
+H4
+((∀y)r(y, f (a, y)) ∨ (∃y)q(a,y))
+(∀y)r(y, f (a, y))
+r(y, f (a, y))
+(∃y)q(a,y)
+q(a,y)
+(q(x,f(y,a)) ∧ ((∃x)r(a, f (x,y))))
+q(x,f(y,a))
+(∃x)r(a, f (x,y))
+r(a, f (x,y))
+
+termos(4):
+f, a, y, x;
+
+c)
+H5 =  (∀x)(∃z)(r(x, y,z) ↔ ((∀z)p(x,z) ∨ (∃x)r(x, a,b)))
+
+comprimento: (9) variáveis ligadas: (2) símbolos livres: (5)
+
+subfórmulas(9):
+H5
+(∃z)(r(x, y,z) ↔ ((∀z)p(x,z) ∨ (∃x)r(x, a,b)))
+r(x, y,z) ↔ ((∀z)p(x,z) ∨ (∃x)r(x, a,b))
+r(x, y,z)
+((∀z)p(x,z) ∨ (∃x)r(x, a,b))
+(∀z)p(x,z)
+p(x,z)
+(∃x)r(x, a,b))
+r(x, a,b))
+
+termos(5):
+x, y, z, a, b;
+
+d)
+H6 =  (∀z)(∀y)(∃x)(p(x, y,z) ∧ r(z, f(y,a))) → ((∃z)p(z, x, y) → r(g(b), f (a,x)))
+ 
+comprimento: (11) variáveis ligadas: (3) símbolos livres: (8)
+
+subfórmulas(11):
+H6
+(∀z)(∀y)(∃x)(p(x, y,z) ∧ r(z, f(y,a)))
+(∀y)(∃x)(p(x, y,z) ∧ r(z, f(y,a)))
+(∃x)(p(x, y,z) ∧ r(z, f(y,a)))
+p(x, y,z) ∧ r(z, f(y,a))
+p(x, y,z)
+r(z,f(y,a))
+((∃z)p(z, x, y) → r(g(b), f (a,x)))
+(∃z)p(z, x, y)
+p(z, x, y)
+r(g(b), f (a,x))
+
+termos(7):
+x, y, z, f, a, g, b;
+
+Questão 03:
+
+a)
+H7 =  (∀x)(p(x, x − 3) ∨ r(x)) ∧ ((∃y)(p(y, x) ∧ q(g(y, b), a))
+
+H71 = (∀x)(p(x, x − 3) ∨ r(x))
+
+H711 = p(x, x − 3)
+I[H711] = p(3 + 3, 3 − 3)
+I[H711] = p(6, 0)
+I[H711] = T
+
+Como I[H711] = T, pela regra do ∨, I[H71] = T.
+
+H72 = ((∃y)(p(y, x) ∧ q(g(y, b), a))
+H721 = p(y, x)
+I[H721] = p(y, x)
+I[H721] = p(13 + 3, 15)
+I[H721] = p(16, 15)
+I[H721] = T
+
+H722 = q(g(y, b), a)
+I[H722] = q(g(2 * ( 2 + 23)), 5)
+I[H722] = q(50, 5)
+I[H722] = T
+
+Como I[H721] = T e I[H722] = T, pela regra do ∧ I[H72] = T.
+
+Portanto, como I[H71] = T e I[H72] = T, pela regra do ∧ I[H7] = T.
+
+b)
+H8 = ((∃x)(p(g(x, y), f (x)) → r(b))) ∨ ((∀x)q(g(x, x), g(a, y)) → p(g(a + x,2x), x2))
+
+H81 = ((∃x)(p(g(x, y), f (x)) → r(b)))
+H811 = r(b)
+I[H811] = (23)
+I[H811] = T
+
+Como I[H811] = T, então pela regra do →, I[H81] = T.
+Portanto pela regra do ∨, I[H8] = T.
+
+c)
+H9 =  ((∃y)p(a, y) ∧ (∃x)r(g(x, y))) ∧ ((∃x)r(x) → r(y))
+
+H91 = ((∃y)p(a, y) ∧ (∃x)r(g(x, y)))
+H911 = (∃x)r(g(x, y))
+I[H911] = F
+
+Como I[H911] = F, pela regra do ∧, I[H91] = F.
+Portanto, como I[H91] = F, pela regra do ∧, I[H9] = F.
+
+d)
+H10 =  (∀x)(∃y)p(x, g(x, y)) → ((∃y)p(a, g(b, y)) ∧ p(f(y), y))
+
+H101 = (∀x)(∃y)p(x, g(x, y))
+I[H101] = p(x, g(x, y))
+I[H101] = p(0 + 3, 2 * (0 + 0))
+I[H101] = p(3,0)
+I[H101] = T
+
+H102 = (∃y)p(a, g(b, y))
+I[H102] = p(5, (2 * (23 + 0)))
+I[H102] = p(5, 46)
+I[H102] = F
+
+Como I[H101] = T e I[H102] = F, pela regra do →, I[H10] = F.
+
