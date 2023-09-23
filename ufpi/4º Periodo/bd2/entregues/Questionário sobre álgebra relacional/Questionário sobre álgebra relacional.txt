@@ -1,0 +1,26 @@
+Liste o nome e o endereço dos empregados que trabalham para o departamento ‘Research’
+
+DEPT_RESEARCH(dno) <- σ(dname = 'Research')(DEPARTMENT)
+π(fname,lname,address)(EMPLOYEE / DEPT_RESEARCH)
+
+-------------------------------------------------------------------------
+Para cada projeto localizado em ‘Stafford’, liste o número do projeto o número do departamento que o controla, e o nome, endereço e data de nascimento do gerente desse departamento.
+
+STARFFORD(pnumber,dnum) <- σ(plocation = 'Starfford')(PROJECT)
+DEPT_PROJ <- DEPARTMENT * STARFFORD
+π(pnumber,dnum,fname,address,bdate)(σ(EMPLOYEE.ssn = DEPT_PROJ.mgrssn)(EMPLOYEE X DEPT_PROJ))
+
+------------------------------------------------------------------------------
+Liste o nome dos empregados que trabalham em todos os projetos controlados pelo departamento número 5.
+
+PROJECT_5(dnum) <- σ(dnum = 5)(PROJECT)
+π(fname,lname)(σ(EMPLOYEE.dno = 5 and PROJECT_5.dnum = 5)(EMPLOYEE X PROJECT_5))
+
+-------------------------------------------------------------------------
+Liste o nome dos empregados que não têm dependentes.
+
+π(fname,lname)(σ(EMPLOYEE.superssn = 0)(EMPLOYEE)) -- para identificar que é dependendo escolhi o superssn como 0.
+
+--------------------------------------------------------------------
+π
+σ
