@@ -1,0 +1,69 @@
+x3 + x1 = 1010
+          3010
+
+x7 + x4 + x3 = 10011000
+               70043000
+
+x9 + 1 = 1000000001
+         9000000001
+
+exemplo de CRC:
+
+x4 + x + 1 = 10011 <- valor binario do polinomio gerador
+
+mensagem = 1101011011
+
+polinomio = 10011
+
+adicionar o maior expoente(direita) 
+na mensagem do tamanho da quantidade do polinomio
+
+1101011011[0000]
+mensagem = 11010110110000
+
+agore é a etapa de relaizar sucessivas subtrações(chor)
+da mensagem pelo polinomio
+
+ 11010110110000
++10011
+---------------
+ 010011
+ +10011
+---------------
+  000001
+  000000
+---------------
+  0000010
+  0000000
+---------------
+  00000101
+  00000000
+---------------
+  000001011
+  000000000
+---------------
+       10110
+       10011
+---------------
+       001010
+         0000
+---------------
+         10100
+         10011
+---------------
+         001110
+           0000
+---------------
+           1110 <- resto
+
+vamos adicionar o resto no final da mensagem:
+
+1101011011 + 1110
+mensagem     resto
+
+11010110111110
+
+será enviada essa nova mensagem para o destino, onde serão feitas
+sucessivas subtrações pelo polinomio,
+se o resto for igual 0, não houve erro,
+caso seja 1, deu erro.

@@ -1,0 +1,120 @@
+m = 10101010[8]
+
+1 passo -> calcular os bits de check:
+
+2**c >= m + c | onde: c = bits de check | m = mensagem
+
+m = 8
+
+2**3 = 8 + 3
+
+8 = 11
+
+2**4 = 8 + 3
+
+16 >= 11(bits minimos)
+
+2 passo -> posicionamento dos bits de check
+
+c = 4
+m = 8
+
+posições dos bits de check:
+2**0 = 1
+2**1 = 2
+2**2 = 4
+2**3 = 8
+
+
+nova mensagem => m = c0 c1 1 c2 0 1 0 c3 1 0 1 0
+
+
+3 passo -> calcular os valores dos bits de check:
+
+m = c0 c1 1 c2 0 1 0 c3 1  0 1   0
+     1  2 3  4 5 6 7  8 9 10 11 12
+
+* -> ignorar as posições dos bits de check
+
+ 12 1|1|0  |0
+ 11 1|0|1  |1
+ 10 1|0|1  |0
+ 9  1|0|0  |1
+*8  1|0|0  |0
+ 7  0|1|1  |1
+ 6  0|1|1  |0
+ 5  0|1|0  |1
+*4  0|1|0  |0
+ 3  0|0|1  |1
+*2  0|0|1  |0
+*1  0|0|0  |1
+   c3|c2|c1|c0
+
+olhar na tabela quais linhas tem 1 na coluna de cada Cx(bit)
+
+m = c0 c1 1 c2 0 1 0 c3 1  0 1   0
+     1  2 3  4 5 6 7  8 9 10 11 12
+
+c0 = m3(1) + m5(0) + m7(0) + m9(1) + m11(1) = 1
+
+c1 = m3(1) + m6(1) + m7(0) + m10(0) + m11(1) = 1
+
+c2 = m5(0) + m6(1) + m7(0) + m12(0) = 1
+
+c3 = m9(1) + m10(0) + m11(1) + m12(0) = 0
+
+substituindo o valor dos bits na mensagem
+
+mO = 1 1 1 1 0 1 0 0 1 0 1 0 
+
+o destino vai precisa fazer o mesmo processo para descobrir os bits
+de check e em seguida realizar uma subtração pela mO - mD, se o resultado
+pela subtração for 0, não aconteceu erro, caso contrario aconteceu
+
+supando que houve erro na mensagem na posição m0 de mO:
+
+a mensagem então serio mD = 0 1 1 1 0 1 0 0 1 0 1 0
+
+recalcular os bits e paridade
+
+2**0 = 1
+2**1 = 2
+2**2 = 4
+2**3 = 8
+
+pegar os valores nessas posições na mensagem
+
+mD = 0 1 1 1 0 1 0 0 1 0 1 0
+     
+     bits de check da mensagem da origem 0110
+     dados da origem 10101010
+
+ 12 1|1|0  |0
+ 11 1|0|1  |1
+ 10 1|0|1  |0
+ 9  1|0|0  |1
+*8  1|0|0  |0
+ 7  0|1|1  |1
+ 6  0|1|1  |0
+ 5  0|1|0  |1
+*4  0|1|0  |0
+ 3  0|0|1  |1
+*2  0|0|1  |0
+*1  0|0|0  |1
+   c3|c2|c1|c0
+
+c0 = m3(1) + m5(0) + m7(0) + m9(1) + m11(1) = 1
+c1 = m3(1) + m6(1) + m7(0) + m10(0) + m11(1) = 1
+c2 = m5(0) + m6(1) + m7(0 + m12(0) = 1
+c3 = m9(1) + m10(0) + m11(1) + m12(0) = 0
+
+mD =            1 1 0 1 0 1 0 0 1 0 1 0
+mDrecalculado = 1 1 0 1 0 1 0 0 1 0 1 0
+
+bitMD = 0 1 1 1
+bitMO = 0 1 1 0
+
+  0 1 1 1
++ 0 1 1 0
+----------
+  0 0 0 1
